@@ -18,7 +18,6 @@ import simclr_models
 import simclr_utitlities
 import transformations
 import visual_utils
-import functional_dataset_pipeline
 
 # %%
 ## Data loading script import
@@ -242,10 +241,10 @@ def train(dataset_full, args):
 
     working_directory = os.path.join(args.working_directory, args.train_device, args.exp_name, args.training_mode)
     if not os.path.exists(working_directory):
-        os.makedirs(working_directory)
-        os.makedirs(os.path.join(working_directory, 'models/'))
-        os.makedirs(os.path.join(working_directory, 'logs/'))
-        os.makedirs(os.path.join(working_directory, 'results/'))    
+        os.makedirs(working_directory, exist_ok=True)
+        os.makedirs(os.path.join(working_directory, 'models/'), exist_ok=True)
+        os.makedirs(os.path.join(working_directory, 'logs/'), exist_ok=True)
+        os.makedirs(os.path.join(working_directory, 'results/'), exist_ok=True)
 
 
     if not hasattr(args, 'start_time'):

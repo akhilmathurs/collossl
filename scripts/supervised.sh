@@ -9,7 +9,7 @@ types=(supervised)
 mkdir ${exp_name}
 dataset_name=realworld-3.0-0.0.dat
 held_out_num_groups=5
-#'realworld-3.0-0.0.dat',  'pamap2-2.0-1.0.dat', 'hhar-2.0-0.5.dat', 'opportunity-2.0-0.0.dat'
+#'realworld-3.0-0.0.dat', 'pamap2-2.0-1.0-v2.dat', 'hhar-2.0-0.5.dat', 'opportunity-2.0-0.0.dat'
 
 exp_name=supervised
 

@@ -10,7 +10,7 @@ exp_name=collossl
 mkdir ${exp_name}
 dataset_name=realworld-3.0-0.0.dat
 held_out_num_groups=5
-#'realworld-3.0-0.0.dat',  'pamap2-2.0-1.0.dat', 'hhar-2.0-0.5.dat', 'opportunity-2.0-0.0.dat' #Dataset list
+#'realworld-3.0-0.0.dat', 'pamap2-2.0-1.0-v2.dat', 'hhar-2.0-0.5.dat', 'opportunity-2.0-0.0.dat' #Dataset list
 
 working_directory=/mnt/data/gsl/runs/ # change working directory
 dataset_path=/mnt/data/gsl/ # change path to dataset files

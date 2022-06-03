@@ -40,7 +40,6 @@ import load_data
 from common_parser import get_parser
 import simclr_utitlities
 import contrastive_training
-import functional_dataset_pipeline
 import ssl_baseline
 
 parser = get_parser()
@@ -130,10 +129,10 @@ METRIC_F1_WEIGHTED = 'f1_weighted'
 
 working_directory = os.path.join(args.working_directory, args.train_device, args.exp_name, args.training_mode)
 if not os.path.exists(working_directory):
-    os.makedirs(working_directory)
-    os.makedirs(os.path.join(working_directory, 'models/'))
-    os.makedirs(os.path.join(working_directory, 'logs/'))
-    os.makedirs(os.path.join(working_directory, 'results/'))    
+    os.makedirs(working_directory, exist_ok=True)
+    os.makedirs(os.path.join(working_directory, 'models/'), exist_ok=True)
+    os.makedirs(os.path.join(working_directory, 'logs/'), exist_ok=True)
+    os.makedirs(os.path.join(working_directory, 'results/'), exist_ok=True)  
 
 start_time = str(int(datetime.datetime.now().timestamp()))
 hparams = [HP_LR_DECAY, HP_LR, HP_TAKE, HP_FINETUNE_TAKE, HP_OPTIM, HP_ARCH, HP_AUG, HP_TEMPERATURE, HP_DEVICE_SELECTION_STRATEGY, HP_WEIGHTED_COLLOSSL, HP_POS_NEG_DEVICES, HP_MULTI_SAMPLING, HP_HELD_OUT, HP_DYNAMIC_DEVICE_SELECTION, HP_EVAL_DEVICE, HP_NEG_SAMPLE_SIZE]
