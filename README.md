@@ -25,6 +25,9 @@ This repo is a Tensorflow implementation of the [ColloSSL paper](https://arxiv.o
 
 The code works with the latest docker image of tensorflow. Run  `bash run_container.sh` to start a docker container, make changes in the script according to your filesystem. Subsequently, run `pip install -r requirements.txt` to install extra dependencies in the docker container.
 
+## Dataset files
+You can find the pre-processed dataset files [here](https://drive.google.com/drive/folders/17A3M-3KpESsK7R_RxqpjKP06kUCqxttH?usp=sharing)
+
 ## Directory Structure
 We create a directory for each `train_device` as follows:
 
